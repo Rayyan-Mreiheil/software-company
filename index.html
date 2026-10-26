@@ -1,11 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 </head>
+
 <body>
-    
+
+    <div class="hero-wrapper" id="home">
+        <!-- Ambient Blur Background -->
+        <div class="hero-glow"></div>
+
+        <!-- Navigation Bar -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid px-4 px-lg-5">
+
+                    <!-- Brand Logo -->
+                    <a class="navbar-brand" href="#">
+                        <img src="Assets/logo.png" alt="Logo" width="200" height="150">
+                    </a>
+
+                    <!-- Mobile Toggle Button -->
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#headerNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Navigation Items & Actions -->
+                    <div class="collapse navbar-collapse" id="headerNav">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item mr-5"><a class="nav-link" href="#home">Home</a></li>
+                            <li class="nav-item ml-5"><a class="nav-link" href="#services">Services</a></li>
+                        </ul>
+
+                        <!-- Let's Build Button -->
+                        <a href="#" class="btn btn-purple">Let's build</a>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="py-5 hero-section">
+            <div class="container-fluid px-4 px-lg-5">
+                <!-- The row holds side-by-side columns -->
+                <div class="row align-items-center">
+                    <!-- Left Div -->
+                    <div class="col-lg-6">
+
+                        <!-- Main Heading -->
+                        <h1 class="hero-title">
+                            Custom Software Development Company in Lebanon
+                        </h1>
+
+                        <!-- Paragraph 1 -->
+                        <p class="hero-description mb-3">
+                            Eurisko is a custom software development company in Lebanon: 200+ engineers building the
+                            bespoke platforms, core systems and integrations that enterprises across Lebanon and MENA
+                            actually run on. From Beirut, we build the software that is too important to rent.
+                        </p>
+
+                        <!-- Paragraph 2 -->
+                        <p class="hero-description mb-4">
+                            Five hundred shipped products since 2009 have taught us what matters in custom software:
+                            architecture that survives growth, code your team can inherit, and delivery you can plan a
+                            business around.
+                        </p>
+
+                        <!-- Action Buttons -->
+                        <div class="d-flex flex-wrap align-items-center gap-3 pt-3">
+                            <a href="#" class="btn btn-purple">
+                                Start a project &rarr;
+                            </a>
+                            <a href="#" class="btn btn-outline-custom fs-6">
+                                Common questions
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Side: Interactive Animated SVG -->
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="hero-img-wrapper">
+                            <svg class="hero-svg-dev" viewBox="0 0 600 450" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <!-- Background Shadow / Glow -->
+                                <ellipse cx="300" cy="410" rx="220" ry="18" fill="#e2e8f0" class="svg-shadow" />
+
+                                <!-- Code Editor Window -->
+                                <rect x="80" y="60" width="440" height="320" rx="16" fill="#1e1e2e"
+                                    class="editor-window" />
+
+                                <!-- Window Top Bar -->
+                                <path d="M80 76C80 67.1634 87.1634 60 96 60H504C512.837 60 520 67.1634 520 76V95H80V76Z"
+                                    fill="#2d2d3f" />
+
+                                <!-- Window Controls (Red, Yellow, Green Dots) -->
+                                <circle cx="110" cy="77.5" r="6" fill="#ff5f56" />
+                                <circle cx="130" cy="77.5" r="6" fill="#ffbd2e" />
+                                <circle cx="150" cy="77.5" r="6" fill="#27c93f" />
+
+                                <!-- Code Lines -->
+                                <rect x="110" y="120" width="140" height="10" rx="5" fill="#6339f0"
+                                    class="code-line line-1" />
+                                <rect x="260" y="120" width="80" height="10" rx="5" fill="#00f0ff"
+                                    class="code-line line-2" />
+                                <rect x="130" y="145" width="200" height="10" rx="5" fill="#ff79c6"
+                                    class="code-line line-3" />
+                                <rect x="150" y="170" width="110" height="10" rx="5" fill="#f1fa8c"
+                                    class="code-line line-4" />
+                                <rect x="270" y="170" width="130" height="10" rx="5" fill="#bd93f9"
+                                    class="code-line line-5" />
+                                <rect x="130" y="195" width="90" height="10" rx="5" fill="#50fa7b"
+                                    class="code-line line-6" />
+
+                                <rect x="110" y="235" width="160" height="10" rx="5" fill="#6339f0"
+                                    class="code-line line-7" />
+                                <rect x="130" y="260" width="220" height="10" rx="5" fill="#00f0ff"
+                                    class="code-line line-8" />
+                                <rect x="150" y="285" width="140" height="10" rx="5" fill="#ff79c6"
+                                    class="code-line line-9" />
+
+                                <!-- Cursor Line -->
+                                <rect x="300" y="285" width="3" height="14" fill="#ffffff" class="code-cursor" />
+
+                                <!-- Floating Floating Element 1: Left Code Tag < /> -->
+                                <g class="float-badge badge-left">
+                                    <rect x="30" y="170" width="80" height="80" rx="20" fill="#6339f0"
+                                        filter="drop-shadow(0px 8px 16px rgba(99,57,240,0.3))" />
+                                    <path d="M55 200L45 210L55 220" stroke="white" stroke-width="4"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M85 200L95 210L85 220" stroke="white" stroke-width="4"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M73 197L67 223" stroke="#00f0ff" stroke-width="4" stroke-linecap="round" />
+                                </g>
+
+                                <!-- Floating Element 2: Right Gear/Settings -->
+                                <g class="float-badge badge-right">
+                                    <rect x="470" y="210" width="90" height="90" rx="22" fill="#00f0ff"
+                                        filter="drop-shadow(0px 8px 16px rgba(0,240,255,0.3))" />
+                                    <circle cx="515" cy="255" r="16" fill="none" stroke="#1e1e2e" stroke-width="6" />
+                                    <path
+                                        d="M515 233V237 M515 273V277 M493 255H497 M533 255H537 M499 239L502 242 M528 268L531 271 M499 271L502 268 M528 242L531 239"
+                                        stroke="#1e1e2e" stroke-width="5" stroke-linecap="round" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
