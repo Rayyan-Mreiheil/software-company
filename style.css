@@ -1,0 +1,333 @@
+.services-title {
+    font-size: 60px !important;
+    font-weight: 700;
+    margin-bottom: 80px !important;
+    line-height: 1.2;
+}
+/* Arrow button in the top-right corner */
+.service-arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #f0f2f5;
+    background-color:  rgba(0, 123, 255, 0.493);
+    border-radius: 20%;
+    font-size: 28px;
+    text-decoration: none;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease,
+                transform 0.3s ease,
+                visibility 0.3s ease;
+
+    z-index: 5;
+    margin-top: 40px;
+    margin-right:20px;
+}
+
+/* Show arrow when hovering over the plus */
+.service-card:has(.plus:hover) .service-arrow {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+/* =========================
+   Service Card
+========================= */
+
+.service-card {
+    position: relative;
+    height: 344px;
+    background-color: #f4f4f6;
+    border-radius: 25px;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* Blue glow in the bottom-left corner */
+.service-card::before {
+    content: "";
+    position: absolute;
+   left: -120px;
+    bottom: -170px;
+
+    width: 550px;
+    height: 550px;
+
+    background: radial-gradient(
+        circle,
+        rgba(0, 123, 255, 0.55) 0%,
+        rgba(0, 123, 255, 0.3) 35%,
+        rgba(0, 123, 255, 0.12) 60%,
+        transparent 75%
+    );
+
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Show glow when hovering over the plus */
+.service-card:has(.plus:hover)::before {
+    opacity: 1;
+}
+
+
+/* =========================
+   Service Image
+========================= */
+
+.service-image {
+    width: 48%;
+    min-width: 0;
+}
+
+.service-image img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: bottom left;
+}
+
+/* Icon positioning and animation */
+.service-icon,
+.service-image .service-icon {
+    width: 260x !important;
+    height: auto !important;
+    max-width: 100%;
+    object-fit: contain;
+    transform: translate(0px, 0px) scale(0.8);
+    transition: transform 0.8s ease;
+    padding-bottom: 10px;
+}
+
+/* Zoom in and move slightly down and left on hover */
+.service-card:has(.plus:hover) .service-icon {
+    transform: translate(-5px, 20px) scale(1.1);
+}
+
+
+/* =========================
+   Service Content
+========================= */
+
+.service-content {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    padding: 50px 15px 40px 10px;
+    overflow: hidden;
+}
+
+.service-content h2 {
+    font-size: clamp(24px, 2vw, 38px);
+    font-weight: 400;
+    line-height: 1.22;
+    color: #000;
+}
+
+
+/* =========================
+   Plus Icon
+========================= */
+
+.plus {
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1;
+    color: #000;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+/* Hide plus on hover */
+.service-content:has(.plus:hover) .plus {
+    opacity: 0;
+}
+
+
+/* =========================
+   Service Description
+========================= */
+
+.service-description {
+    position: absolute;
+    top: 62%;
+    left: 10;
+    right: 15px;
+    width: auto;
+    margin: 0;
+    opacity: 0;
+    text-align: left;
+    transform: translateY(calc(100% + 50vh));
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+    pointer-events: none;
+}
+
+/* Move description to the center */
+.service-content:has(.plus:hover) .service-description {
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+/* Reset and background setup */
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #0b0714; /* Deep dark purple-black background */
+  color: #ffffff;
+}
+
+/* Section Layout */
+.cta-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+  background: radial-gradient(circle at center, #150c2c 45%, #0b0714 90%);
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 700px;
+}
+
+/* Small Subtitle */
+.cta-subtitle {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #8c7ae6;
+  margin-bottom: 1rem;
+}
+
+/* Main Title */
+.cta-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 1.5rem 0;
+  color: #ffffff;
+}
+
+/* Description Text */
+.cta-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #9ca3af; /* Muted grayish-purple */
+  margin: 0 0 2rem 0;
+}
+
+/* Glowing Button */
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: #ffffff;
+  padding: 0.85rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.4); /* Soft purple glow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 35px rgba(139, 92, 246, 0.6);
+}
+
+.cta-section {
+    margin-top: 80px;
+}
+.bg-dark-purple {
+    background-color: #0b0714 !important;
+
+  }
+    .footer-links a {
+    color: white !important;
+    text-decoration: none; /* Optional: removes the underline */}
+
+
+.footer-logo {
+    height: 150px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 991.98px) {
+    .service-card {
+        height: 320px;
+    }
+
+    .service-content h2 {
+        font-size: 32px;
+    }
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 575.98px) {
+    .service-card {
+        height: 240px;
+        border-radius: 18px;
+    }
+
+    .service-image {
+        width: 45%;
+    }
+
+    .service-content {
+         position: relative;
+    padding: 50px 15px 40px 10px;
+    }
+
+    .service-content h2 {
+         margin-left: 0;
+    text-align: left;
+    }
+
+    .plus {
+        font-size: 32px;
+    }
+}
+.text-lg-start,
+    .text-lg-end {
+        text-align: center !important;
+    }
+   @media (min-width: 992px) {
+    .footer-content .explore-column {
+        position: relative;
+        left: 80px;
+    }
+}
