@@ -42,7 +42,6 @@
 }
 /* =========================
    Service Card
-========================= */
 
 .service-card {
     position: relative;
@@ -85,7 +84,6 @@
 
 /* =========================
    Service Image
-========================= */
 
 .service-image {
     width: 48%;
@@ -120,7 +118,6 @@
 
 /* =========================
    Service Content
-========================= */
 
 .service-content {
     position: relative;
@@ -140,7 +137,6 @@
 
 /* =========================
    Plus Icon
-========================= */
 
 .plus {
     font-size: 42px;
@@ -159,7 +155,6 @@
 
 /* =========================
    Service Description
-========================= */
 
 .service-description {
     position: absolute;
@@ -280,7 +275,6 @@ body {
 
 /* =========================
    Tablet
-========================= */
 
 @media (max-width: 991.98px) {
     .service-card {
@@ -295,7 +289,6 @@ body {
 
 /* =========================
    Mobile
-========================= */
 
 @media (max-width: 575.98px) {
     .service-card {
@@ -330,4 +323,219 @@ body {
         position: relative;
         left: 80px;
     }
+/* Dark theme global setup */
+body {
+    background-color: #05050a;
+    color: #ffffff;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Ambient blue/purple glow background */
+.hero-wrapper {
+    position: relative;
+    background: #05050a;
+    isolation: isolate;
+}
+
+.hero-glow {
+    position: absolute;
+    top: -100px;
+    right: -50px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(99, 57, 240, 0.45) 0%, rgba(45, 12, 120, 0.2) 50%, rgba(5, 5, 10, 0) 70%);
+    filter: blur(80px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Header styling */
+.navbar {
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #fff !important;
+    letter-spacing: -0.5px;
+}
+
+.logo-icon {
+    color: #6339f0;
+    margin-right: 6px;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 20px 36px !important;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    /* Creates a thick, colorful bottom border only on hover */
+    border-bottom: 4px solid #ffc107 !important; /* Change #ffc107 to any color you want */
+    
+    /* Order: top-left, top-right, bottom-right, bottom-left */
+    border-radius: 0 0 30px 30px !important;
+}
+
+/* Top Search Icon Button */
+.btn-search {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #d0d0e5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.btn-search:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+/* Pill Action Buttons */
+.btn-purple {
+    background-color: blue !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 100px !important;
+    padding: 15px 20px !important;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-purple:hover {
+    padding: 11px 16px !important;
+    background-color: #ffc107 !important;
+    border: 5px solid white !important;
+    /* Horizontal offset, Vertical offset, Blur radius, Spread radius, Color */
+    /* box-shadow: 0 8px 10px white !important; */
+}
+
+.btn-outline-custom {
+    background-color: transparent;
+    color: #ffffff !important;
+    font-weight: 500 !important;
+    border-radius: 50px !important;
+    padding: 15px 20px !important;
+    border: 2px solid rgba(255, 255, 255, 0.25) !important;
+    transition: all 0.2s ease !important;
+}
+
+.btn-outline-custom:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: #ffc107 !important;
+}
+
+/* Hero Content Styling */
+.breadcrumb-text {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #8a8aa3;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: #9d9db5;
+    max-width: 800px;
+}
+
+/* ################# */
+/* Container base setup */
+/* .hero-section {
+    position: relative;
+    overflow: hidden;
+} */
+
+.hero-img-wrapper {
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+.hero-svg-dev {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Base states before hover */
+.code-line {
+    opacity: 0.3;
+    transform: scaleX(0.8);
+    transform-origin: left;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.code-cursor {
+    animation: blink 1s infinite;
+}
+
+.float-badge {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.editor-window {
+    transition: transform 0.5s ease;
+}
+
+/* ==========================================================
+   HOVER TRIGGER: When mouse enters ANYWHERE in .hero-section
+   ========================================================== */
+
+/* 1. Lift and highlight editor window */
+.hero-section:hover .editor-window {
+    transform: translateY(-6px);
+}
+
+/* 2. Animate floating elements outwards/upwards */
+.hero-section:hover .badge-left {
+    transform: translate(-12px, -15px) rotate(-6deg);
+}
+
+.hero-section:hover .badge-right {
+    transform: translate(12px, -18px) rotate(8deg);
+}
+
+/* 3. Stagger code line animations (typing effect on hover) */
+.hero-section:hover .code-line {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.hero-section:hover .line-1 { transition-delay: 0.05s; }
+.hero-section:hover .line-2 { transition-delay: 0.10s; }
+.hero-section:hover .line-3 { transition-delay: 0.15s; }
+.hero-section:hover .line-4 { transition-delay: 0.20s; }
+.hero-section:hover .line-5 { transition-delay: 0.25s; }
+.hero-section:hover .line-6 { transition-delay: 0.30s; }
+.hero-section:hover .line-7 { transition-delay: 0.35s; }
+.hero-section:hover .line-8 { transition-delay: 0.40s; }
+.hero-section:hover .line-9 { transition-delay: 0.45s; }
+
+/* Blinking cursor keyframes */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
